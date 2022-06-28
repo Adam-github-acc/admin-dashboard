@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -19,6 +23,8 @@
     display: grid;
     grid-auto-flow: column;
     margin: 15px;
+    justify-content: start;
+    gap: 1rem;
 }
 .header{
     background-color: aliceblue;
@@ -79,7 +85,8 @@ button{
     grid-template: 2rem 1fr / 3fr 1fr;
     column-gap: 1rem;
 }
-.headline{
+.headline,
+.trending{
     font-size: 1.3rem;
     align-self: end;
     font-weight: bold;
@@ -90,13 +97,13 @@ button{
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin: 1rem;
+    height: 560px;
 }
 .card{
     border-radius: 8px;
     background-color: aliceblue;
     display: grid;
     grid-template-columns: 5% 95%;
-    grid-template-rows: 100px;
 }
 .side{
     background-color: orange;
@@ -112,4 +119,60 @@ p{
     justify-self: end;
     margin-right: 1rem;
     margin-top: -1rem;
+}
+.announcements{
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+}
+.a-tops{
+    border-radius: 8px;
+    display: grid;
+    grid-row: 1;
+    row-gap: 2px;
+    margin: 1rem;
+    text-align: center;
+}
+.a-top{
+    background-color: aliceblue;
+    border-radius: 8px;
+}
+.mini{
+    font-size: 0.5rem;
+}
+.a-bots{
+    background-color: aliceblue;
+    display: grid;
+    grid-row: 3;
+    border-radius: 8px;
+    margin: 1rem;
+}
+.a-bot{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+.a-bot>div{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+}
+.a-bot p{
+    margin: 0;
+}
+.ball{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+.pink{
+    background-color: pink;
+}
+.orange{
+    background-color: orange;
 }
